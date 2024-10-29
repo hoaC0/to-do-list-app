@@ -1,0 +1,189 @@
+/* import pixel font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', cursive;
+}
+
+body {
+  background: linear-gradient(45deg, #2b1055, #7597de);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* main container */
+#todo-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 600px;
+  margin: 50px auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* header styles */
+#header h1 {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px #2b1055;
+  text-align: center;
+}
+
+/* input form styles */
+#todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.input-item {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 12px;
+}
+
+.input-item::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#input-button {
+  padding: 12px 24px;
+  background: #ff3e7f;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+#input-button:hover {
+  background: #ff65a3;
+  transform: translateY(-2px);
+}
+
+/* task list styles */
+h2 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #2b1055;
+}
+
+#list-container {
+  list-style: none;
+}
+
+#list-container li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+#list-container li:hover {
+  transform: translateX(5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* checkbox styles */
+#list-container li input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+#list-container li input[type="checkbox"]:checked {
+  background: #ff3e7f;
+}
+
+#list-container li input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  color: #fff;
+  font-size: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* task text styles */
+#list-container li label {
+  flex: 1;
+  color: #fff;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* completed task styles */
+#list-container li.completed span {
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* button styles */
+.edit-btn, .delete-btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 10px;
+  transition: all 0.3s ease;
+}
+
+.edit-btn {
+  background: #7597de;
+}
+
+.delete-btn {
+  background: #ff3e7f;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+/* responsive design */
+@media (max-width: 480px) {
+  #todo-container {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  #header h1 {
+    font-size: 18px;
+  }
+
+  #todo-form {
+    flex-direction: column;
+  }
+
+  #input-button {
+    width: 100%;
+  }
+}
