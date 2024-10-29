@@ -10,6 +10,9 @@ a simple To Do List Website/App
 - completed tasks striked
 - clean and pleasing design
 
+### To be added...
+- database, so tasks don't disappear when refreshing website
+
 ## Contact
 
 email: hoachau1010@gmail.com
