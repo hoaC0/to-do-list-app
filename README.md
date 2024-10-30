@@ -13,7 +13,7 @@ a simple To Do List Website/App
 - clean and pleasing design
 
 ### To be added...
-- database, so tasks don't disappear when refreshing website
+- api, so tasks don't disappear when refreshing website
 
 ## Contact
 
